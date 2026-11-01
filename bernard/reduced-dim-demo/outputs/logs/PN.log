@@ -1,0 +1,10 @@
+command: Rscript /Users/uasic/Desktop/BERNARD/bernard/src/PN.R /Users/uasic/Desktop/BERNARD/bernard/reduced-dim-demo
+status:  completed
+runtime: 3.5 seconds
+--------------------------------------------------------------------------------
+[1] "/Users/uasic/Desktop/BERNARD/bernard/reduced-dim-demo"
+Processing file: clean-demo-reduced.csv 
+Control group used as the reference distribution: TD
+An unexpected error occurred with file: clean-demo-reduced.csv
+Error: Error in doTryCatch(return(expr), name, parentenv, handler): Batch '-0.29134178717083' has fewer than two 'TD' samples, so no reference distribution can be built for it. Percentile normalisation needs control samples in every batch.
+

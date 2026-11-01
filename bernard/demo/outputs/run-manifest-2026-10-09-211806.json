@@ -1,0 +1,170 @@
+{
+  "bernard_run": {
+    "date": "2026-10-09-211806",
+    "random_seed": 42
+  },
+  "settings": {
+    "evaluation_space": "zscore-euclidean",
+    "select_thresholdSamples": 0.9,
+    "select_thresholdFeatures": 0.9,
+    "outlier_contamination": 0.05,
+    "diagnosis_variability_retention": 50.0,
+    "diagnosis_variability_lower_limit": 10.0,
+    "run_permdisp": true,
+    "permdisp_permutations": 999,
+    "run_auroc": true,
+    "neighbourhood_k": 30,
+    "config_file": "bernard/bernard_cfg_demo.txt",
+    "random_seed": 42,
+    "permanova_permutations": 999,
+    "significance_alpha": 0.05,
+    "kbet_alpha": 0.05,
+    "auroc_trees": 200,
+    "auroc_folds": 5,
+    "pvca_variance_threshold": 0.8,
+    "pvca_max_components": 10,
+    "tsne_perplexity": 0.0,
+    "figure_dpi": 300,
+    "variability_threshold_step": 5.0,
+    "correction_methods": [
+      "pyCombat",
+      "BMC",
+      "RemoveBatchEffect()",
+      "ConQuR",
+      "RUV3",
+      "PLSDA",
+      "sPLSDA",
+      "wPLSDA",
+      "PN",
+      "MetaDICT",
+      "ComBat-Seq",
+      "MMUPHin",
+      "RUV-III-NB",
+      "FSQN",
+      "FAbatch",
+      "DEBIAS-M"
+    ],
+    "max_parallel_methods": 4
+  },
+  "datasets": [
+    {
+      "dataset": "demo",
+      "samples": 373,
+      "features": 11
+    }
+  ],
+  "methods": [
+    {
+      "method": "pyCombat",
+      "status": "completed",
+      "output_files": 1,
+      "runtime_seconds": 4.57
+    },
+    {
+      "method": "BMC",
+      "status": "completed",
+      "output_files": 1,
+      "runtime_seconds": 4.72
+    },
+    {
+      "method": "RemoveBatchEffect()",
+      "status": "completed",
+      "output_files": 1,
+      "runtime_seconds": 0.75
+    },
+    {
+      "method": "ConQuR",
+      "status": "completed",
+      "output_files": 1,
+      "runtime_seconds": 10.43
+    },
+    {
+      "method": "RUV3",
+      "status": "completed",
+      "output_files": 1,
+      "runtime_seconds": 4.68
+    },
+    {
+      "method": "PLSDA",
+      "status": "completed",
+      "output_files": 1,
+      "runtime_seconds": 4.48
+    },
+    {
+      "method": "sPLSDA",
+      "status": "completed",
+      "output_files": 1,
+      "runtime_seconds": 10.62
+    },
+    {
+      "method": "wPLSDA",
+      "status": "completed",
+      "output_files": 1,
+      "runtime_seconds": 4.4
+    },
+    {
+      "method": "PN",
+      "status": "completed",
+      "output_files": 1,
+      "runtime_seconds": 3.04
+    },
+    {
+      "method": "MetaDICT",
+      "status": "completed",
+      "output_files": 1,
+      "runtime_seconds": 2.67
+    },
+    {
+      "method": "ComBat-Seq",
+      "status": "completed",
+      "output_files": 1,
+      "runtime_seconds": 2.44
+    },
+    {
+      "method": "MMUPHin",
+      "status": "completed",
+      "output_files": 1,
+      "runtime_seconds": 0.63
+    },
+    {
+      "method": "RUV-III-NB",
+      "status": "completed",
+      "output_files": 1,
+      "runtime_seconds": 2.59
+    },
+    {
+      "method": "FSQN",
+      "status": "completed",
+      "output_files": 1,
+      "runtime_seconds": 0.42
+    },
+    {
+      "method": "FAbatch",
+      "status": "FAILED (the method ended without an error but wrote no corrected file)",
+      "output_files": 0,
+      "runtime_seconds": 3.28
+    },
+    {
+      "method": "DEBIAS-M",
+      "status": "completed",
+      "output_files": 1,
+      "runtime_seconds": 5.51
+    }
+  ],
+  "software": {
+    "python": "3.12.2",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "R": "R version 4.5.2 (2025-10-31)",
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "2.2.3",
+      "scipy": "1.11.4",
+      "sklearn": "1.6.0",
+      "skbio": "0.6.0",
+      "statsmodels": "0.14.1",
+      "matplotlib": "3.8.4",
+      "seaborn": "0.13.2",
+      "inmoose": "0.7.3"
+    }
+  }
+}

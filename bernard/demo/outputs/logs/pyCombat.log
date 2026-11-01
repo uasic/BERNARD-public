@@ -1,0 +1,6 @@
+command: /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 /Users/uasic/Desktop/BERNARD/bernard/src/pyCombat.py /Users/uasic/Desktop/BERNARD-public/bernard/demo
+status:  completed
+runtime: 4.6 seconds
+--------------------------------------------------------------------------------
+File name: clean-demo.csv
+pyCombat finished.

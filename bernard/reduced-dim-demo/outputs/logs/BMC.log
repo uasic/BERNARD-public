@@ -1,0 +1,7 @@
+command: Rscript /Users/uasic/Desktop/BERNARD/bernard/src/BMC.R /Users/uasic/Desktop/BERNARD/bernard/reduced-dim-demo
+status:  completed
+runtime: 4.5 seconds
+--------------------------------------------------------------------------------
+[1] "/Users/uasic/Desktop/BERNARD/bernard/reduced-dim-demo"
+Processing file: clean-demo-reduced.csv 
+[1] "BMC finished."

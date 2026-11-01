@@ -1,0 +1,7 @@
+command: Rscript /Users/uasic/Desktop/BERNARD/bernard/src/MMUPHin.R /Users/uasic/Desktop/BERNARD/bernard/reduced-dim-demo
+status:  completed
+runtime: 0.7 seconds
+--------------------------------------------------------------------------------
+[1] "/Users/uasic/Desktop/BERNARD/bernard/reduced-dim-demo"
+Processing file:  clean-demo-reduced.csvdiagnosis is confounded with batch (Covariates and batch are confounded!); correcting without it as a covariate.
+[1] "MMUPHin finished."

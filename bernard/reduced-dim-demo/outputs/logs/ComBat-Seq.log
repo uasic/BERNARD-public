@@ -1,0 +1,11 @@
+command: Rscript /Users/uasic/Desktop/BERNARD/bernard/src/ComBatSeq.R /Users/uasic/Desktop/BERNARD/bernard/reduced-dim-demo
+status:  completed
+runtime: 3.5 seconds
+--------------------------------------------------------------------------------
+[1] "/Users/uasic/Desktop/BERNARD/bernard/reduced-dim-demo"
+Processing file:  clean-demo-reduced.csvAn unexpected error occurred with file: clean-demo-reduced.csv
+Error: Error in DGEList.default(counts = counts): NA counts not allowed
+
+Warning message:
+In storage.mode(values) <- "integer" :
+  NAs introduced by coercion to integer range

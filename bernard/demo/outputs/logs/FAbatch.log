@@ -1,0 +1,8 @@
+command: Rscript /Users/uasic/Desktop/BERNARD/bernard/src/FAbatch.R /Users/uasic/Desktop/BERNARD-public/bernard/demo
+status:  completed
+runtime: 3.3 seconds
+--------------------------------------------------------------------------------
+[1] "/Users/uasic/Desktop/BERNARD-public/bernard/demo"
+Processing file:  clean-demo.csvAn unexpected error occurred with file: clean-demo.csv
+Error: Error in doTryCatch(return(expr), name, parentenv, handler): FAbatch needs more variable features than the largest batch group (have 9, need > 162).
+

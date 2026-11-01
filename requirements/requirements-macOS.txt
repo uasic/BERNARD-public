@@ -1,0 +1,35 @@
+# =================================================================================================
+# BERNARD - Python requirements for macOS (Python 3.12)
+#
+#   pip install -r requirements/requirements-macOS.txt
+#
+# Only the packages BERNARD actually imports are listed here. Everything else those packages need
+# (anndata, biom-format, fastcluster, h5py, hdmedians, patsy, pillow, yattag, ...) is pulled in
+# automatically by pip, so it does not have to be repeated - and does not have to be kept in sync
+# by hand every time one of these releases a new version.
+#
+# The R side is installed separately with `Rscript requirements/RPackages.R`, and DEBIAS-M (the one
+# method that needs PyTorch) with `pip install -r requirements/requirements-debias.txt`.
+#
+# Why the pins are older here than on Linux: inmoose 0.7.3 requires numpy < 2.1, which fixes the
+# whole stack on the numpy 1.26 line. Do not bump numpy on its own - bump inmoose first.
+# =================================================================================================
+
+# --- core numerics and table handling ------------------------------------------------------------
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.11.4
+
+# --- statistics: PERMANOVA / PERMDISP, PLS regression, PCA / MDS / t-SNE, random forest ----------
+scikit-bio==0.6.3
+scikit-learn==1.8.0
+statsmodels==0.14.6
+
+# --- batch effect correction: pyCombat (the only correction method that is not an R script) ------
+inmoose==0.7.3
+
+# --- plots and reports: PNG figures, PDF report, Excel results tables -----------------------------
+matplotlib==3.8.4
+seaborn==0.13.2
+reportlab==4.3.1
+openpyxl==3.1.2

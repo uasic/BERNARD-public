@@ -1,0 +1,11 @@
+command: Rscript /Users/uasic/Desktop/BERNARD/bernard/src/RUV3.R /Users/uasic/Desktop/BERNARD/bernard/reduced-dim-demo
+status:  completed
+runtime: 4.3 seconds
+--------------------------------------------------------------------------------
+[1] "/Users/uasic/Desktop/BERNARD/bernard/reduced-dim-demo"
+Processing file:  clean-demo-reduced.csvPseudo negative controls: 75 of 80 features
+Number of removed unwanted factors (k): 3
+[1] "RUVIII finished."
+Warning message:
+In RUVIII(Y = Y, M = M, ctl = controls, k = k) :
+  m is greater than n!  This is not a problem itself, but may indicate that you need to transpose your data matrix.  Please ensure that rows correspond to observations (e.g. microarrays) and columns correspond to features (e.g. genes).

@@ -1,0 +1,11 @@
+# Optional dependency for the DEBIASM.R correction method (DEBIAS-M).
+# This package pulls in PyTorch and related machine-learning dependencies, so
+# it is intentionally kept out of the base requirements-*.txt files. Install
+# it into the same Python environment BERNARD.py runs in (reticulate, used by
+# DEBIASM.R, defaults to a ".venv" in the working directory or whatever
+# python3/python is first on PATH; set RETICULATE_PYTHON to point at a
+# specific interpreter if needed):
+#
+#   pip install -r requirements/requirements-debias.txt
+#
+DEBIAS-M>=0.0.2

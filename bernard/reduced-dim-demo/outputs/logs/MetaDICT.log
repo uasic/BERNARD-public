@@ -1,0 +1,12 @@
+command: Rscript /Users/uasic/Desktop/BERNARD/bernard/src/MetaDICT.R /Users/uasic/Desktop/BERNARD/bernard/reduced-dim-demo
+status:  completed
+runtime: 1.6 seconds
+--------------------------------------------------------------------------------
+[1] "/Users/uasic/Desktop/BERNARD/bernard/reduced-dim-demo"
+Processing file:  clean-demo-reduced.csvNo taxonomy in the feature names; MetaDICT uses the distance between the features' abundance profiles instead.
+An unexpected error occurred with file: clean-demo-reduced.csv
+Error: Error in svd(as.matrix(count)): infinite or missing values in 'x'
+
+Warning message:
+In storage.mode(values) <- "integer" :
+  NAs introduced by coercion to integer range

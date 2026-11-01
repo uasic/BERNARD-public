@@ -1,0 +1,10 @@
+command: Rscript /Users/uasic/Desktop/BERNARD/bernard/src/RemoveBatchEffect().R /Users/uasic/Desktop/BERNARD/bernard/reduced-dim-demo
+status:  completed
+runtime: 0.8 seconds
+--------------------------------------------------------------------------------
+[1] "/Users/uasic/Desktop/BERNARD/bernard/reduced-dim-demo"
+Processing file: clean-demo-reduced.csv 
+Coefficients not estimable: batch3 
+[1] "RemoveBatchEffect finished."
+Warning message:
+Partial NA coefficients for 80 probe(s) 

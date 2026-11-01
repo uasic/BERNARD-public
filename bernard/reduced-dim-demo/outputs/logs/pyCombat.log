@@ -1,0 +1,7 @@
+command: /Library/Frameworks/Python.framework/Versions/3.12/bin/python3 /Users/uasic/Desktop/BERNARD/bernard/src/pyCombat.py /Users/uasic/Desktop/BERNARD/bernard/reduced-dim-demo
+status:  completed
+runtime: 4.5 seconds
+--------------------------------------------------------------------------------
+File name: clean-demo-reduced.csv
+diagnosis is confounded with batch (Covariates cov_0[T.behavioral] are confounded with the batches. Please review your covariates before proceeding with batch effect correction.); correcting without it as a covariate.
+pyCombat finished.

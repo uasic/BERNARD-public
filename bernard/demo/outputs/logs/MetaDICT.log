@@ -1,0 +1,11 @@
+command: Rscript /Users/uasic/Desktop/BERNARD/bernard/src/MetaDICT.R /Users/uasic/Desktop/BERNARD-public/bernard/demo
+status:  completed
+runtime: 2.7 seconds
+--------------------------------------------------------------------------------
+[1] "/Users/uasic/Desktop/BERNARD-public/bernard/demo"
+Processing file:  clean-demo.csvNo taxonomy in the feature names; MetaDICT uses the distance between the features' abundance profiles instead.
+[1] "MetaDICT finished."
+Normalization completed. Beginning model fitting...
+Successful convergence.
+Maximum relative error: 0.000000
+Effective rank of D: 4.821984

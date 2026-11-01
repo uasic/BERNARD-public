@@ -1,0 +1,1 @@
+bernard_input = /Users/uasic/Desktop/BERNARD/batch-reduction/inputs

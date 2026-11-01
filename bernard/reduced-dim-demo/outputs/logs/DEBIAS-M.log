@@ -1,0 +1,10 @@
+command: Rscript /Users/uasic/Desktop/BERNARD/bernard/src/DEBIASM.R /Users/uasic/Desktop/BERNARD/bernard/reduced-dim-demo
+status:  completed
+runtime: 6.6 seconds
+--------------------------------------------------------------------------------
+[1] "/Users/uasic/Desktop/BERNARD/bernard/reduced-dim-demo"
+Processing file:  clean-demo-reduced.csv[1] "DEBIAS-M finished."
+Global seed set to 42
+Warning message:
+In storage.mode(values) <- "integer" :
+  NAs introduced by coercion to integer range

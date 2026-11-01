@@ -1,0 +1,7 @@
+command: Rscript /Users/uasic/Desktop/BERNARD/bernard/src/RemoveBatchEffect().R /Users/uasic/Desktop/BERNARD-public/bernard/demo
+status:  completed
+runtime: 0.8 seconds
+--------------------------------------------------------------------------------
+[1] "/Users/uasic/Desktop/BERNARD-public/bernard/demo"
+Processing file: clean-demo.csv 
+[1] "RemoveBatchEffect finished."

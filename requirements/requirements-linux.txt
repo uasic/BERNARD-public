@@ -1,0 +1,37 @@
+# =================================================================================================
+# BERNARD - Python requirements for Linux (Python 3.12+)
+#
+#   pip install -r requirements/requirements-linux.txt
+#
+# Only the packages BERNARD actually imports are listed here. Everything else those packages need
+# (anndata, biom-format, fastcluster, h5py, hdmedians, patsy, pillow, yattag, ...) is pulled in
+# automatically by pip, so it does not have to be repeated - and does not have to be kept in sync
+# by hand every time one of these releases a new version.
+#
+# The R side is installed separately with `Rscript requirements/RPackages.R`, and DEBIAS-M (the one
+# method that needs PyTorch) with `pip install -r requirements/requirements-debias.txt`.
+# `requirements/Dockerfile` lists the Ubuntu system packages the heavier R/Bioconductor
+# dependencies need to compile.
+#
+# This is the most up-to-date of the three platform stacks: inmoose 0.9.0 lifted the numpy < 2.1
+# cap that still holds macOS and Windows on numpy 1.26, so Linux runs on numpy 2.x / scipy 1.17.
+# =================================================================================================
+
+# --- core numerics and table handling ------------------------------------------------------------
+numpy==2.3.5
+pandas==2.3.3
+scipy==1.17.0
+
+# --- statistics: PERMANOVA / PERMDISP, PLS regression, PCA / MDS / t-SNE, random forest ----------
+scikit-bio==0.7.1.post1
+scikit-learn==1.8.0
+statsmodels==0.14.6
+
+# --- batch effect correction: pyCombat (the only correction method that is not an R script) ------
+inmoose==0.9.0
+
+# --- plots and reports: PNG figures, PDF report, Excel results tables -----------------------------
+matplotlib==3.10.8
+seaborn==0.13.2
+reportlab==4.4.7
+openpyxl==3.1.5

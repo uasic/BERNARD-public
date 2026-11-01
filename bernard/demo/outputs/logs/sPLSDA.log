@@ -1,0 +1,33 @@
+command: Rscript /Users/uasic/Desktop/BERNARD/bernard/src/sPLSDA.R /Users/uasic/Desktop/BERNARD-public/bernard/demo
+status:  completed
+runtime: 10.6 seconds
+--------------------------------------------------------------------------------
+[1] "/Users/uasic/Desktop/BERNARD-public/bernard/demo"
+[1] "clean-demo.csv"
+[1] "sex" "age"
+[1] "Loading data..."
+Processing file:  clean-demo.csv[1] "Updating data..."
+[1] "Updating data..."
+[1] "Defining batch and phenotype..."
+[1] "Transformation..."
+[1] "sPLSDA"
+[1] "Estimating the number of features to keep"
+[1] "Optimal number of features per component:"
+comp1 
+    9 
+Number of features kept per treatment component: 9
+[1] "Estimating the number of batch components"
+[1] "Percentage of variance in the batch variable explained by each batch component:"
+$X
+    comp1     comp2     comp3 
+0.2971784 0.2266662 0.2087854 
+
+$Y
+    comp1     comp2     comp3 
+0.4561609 0.5438391 0.5036690 
+
+Number of batch components used: 2 of 3
+[1] "Saving corrected data..."
+[1] "sPLSDA finished."
+Warning message:
+package ‘S4Vectors’ was built under R version 4.5.3 

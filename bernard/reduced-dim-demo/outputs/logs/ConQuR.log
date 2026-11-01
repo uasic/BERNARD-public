@@ -1,0 +1,15 @@
+command: Rscript /Users/uasic/Desktop/BERNARD/bernard/src/ConQuR.R /Users/uasic/Desktop/BERNARD/bernard/reduced-dim-demo
+status:  completed
+runtime: 2.7 seconds
+--------------------------------------------------------------------------------
+[1] "/Users/uasic/Desktop/BERNARD/bernard/reduced-dim-demo"
+Processing file:  clean-demo-reduced.csvAn unexpected error occurred with file: clean-demo-reduced.csv
+Error: Error in {: task 1 failed - "missing value where TRUE/FALSE needed"
+
+Warning messages:
+1: replacing previous import ‘ape::balance’ by ‘compositions::balance’ when loading ‘ConQuR’ 
+2: replacing previous import ‘ape::where’ by ‘dplyr::where’ when loading ‘ConQuR’ 
+3: replacing previous import ‘compositions::rmult’ by ‘glmnet::rmult’ when loading ‘ConQuR’ 
+4: replacing previous import ‘dplyr::combine’ by ‘randomForest::combine’ when loading ‘ConQuR’ 
+5: In storage.mode(values) <- "integer" :
+  NAs introduced by coercion to integer range

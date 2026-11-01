@@ -1,0 +1,11 @@
+command: Rscript /Users/uasic/Desktop/BERNARD/bernard/src/RUVIIINB.R /Users/uasic/Desktop/BERNARD/bernard/reduced-dim-demo
+status:  completed
+runtime: 1.0 seconds
+--------------------------------------------------------------------------------
+[1] "/Users/uasic/Desktop/BERNARD/bernard/reduced-dim-demo"
+Processing file:  clean-demo-reduced.csvAn unexpected error occurred with file: clean-demo-reduced.csv
+Error: Error in if (stats::sd(feature_values) == 0) return(1): missing value where TRUE/FALSE needed
+
+Warning message:
+In storage.mode(Y) <- "integer" :
+  NAs introduced by coercion to integer range

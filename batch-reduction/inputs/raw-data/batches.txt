@@ -1,0 +1,4 @@
+locationCountry
+locationContinent
+instrument
+bioProject

@@ -1,0 +1,6 @@
+{
+    "study_name": "batch",
+    "factor_of_interest": "diagnosis",
+    "sample_id_column": "run",
+    "random_seed": 42
+}

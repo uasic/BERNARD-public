@@ -1,0 +1,4 @@
+{ 
+"sample_id_column": "run",
+"factor_of_interest": "diagnosis"
+}

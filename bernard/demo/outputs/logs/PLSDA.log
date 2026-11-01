@@ -1,0 +1,39 @@
+command: Rscript /Users/uasic/Desktop/BERNARD/bernard/src/PLSDA.R /Users/uasic/Desktop/BERNARD-public/bernard/demo
+status:  completed
+runtime: 4.5 seconds
+--------------------------------------------------------------------------------
+[1] "/Users/uasic/Desktop/BERNARD-public/bernard/demo"
+[1] "clean-demo.csv"
+[1] "sex" "age"
+[1] "batch"
+[1] "Loading data..."
+Processing file:  clean-demo.csv[1] "Updating data..."
+[1] "Updating data..."
+[1] "Updating data..."
+[1] "Defining batch and phenotype..."
+[1] "Logratio transformation"
+[1] "Proportion of variance explained with components:"
+$X
+    comp1 
+0.4209647 
+
+$Y
+comp1 
+    1 
+
+[1] "Estimating the number of batch components"
+[1] "Displays the percentage of variance in Y.bat (the batch variable) explained by each batch component."
+$X
+    comp1     comp2     comp3 
+0.2971784 0.2266662 0.2087854 
+
+$Y
+    comp1     comp2     comp3 
+0.4561609 0.5438391 0.5036690 
+
+Number of batch components used: 2 of 3
+[1] "Batch correction"
+[1] "Saving corrected data..."
+[1] "PLSDA finished."
+Warning message:
+package ‘S4Vectors’ was built under R version 4.5.3 

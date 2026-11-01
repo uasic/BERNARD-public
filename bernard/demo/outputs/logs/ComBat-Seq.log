@@ -1,0 +1,13 @@
+command: Rscript /Users/uasic/Desktop/BERNARD/bernard/src/ComBatSeq.R /Users/uasic/Desktop/BERNARD-public/bernard/demo
+status:  completed
+runtime: 2.4 seconds
+--------------------------------------------------------------------------------
+[1] "/Users/uasic/Desktop/BERNARD-public/bernard/demo"
+Processing file:  clean-demo.csvFound 3 batches
+Using full model in ComBat-seq.
+Adjusting for 1 covariate(s) or covariate level(s)
+Estimating dispersions
+Fitting the GLM model
+Shrinkage off - using GLM estimates for parameters
+Adjusting the data
+[1] "ComBat-Seq finished."
