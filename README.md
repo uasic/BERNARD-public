@@ -173,7 +173,7 @@ python3 bernard/src/BERNARD.py bernard/bernard_cfg_demo.txt
 
 All parameters can be set in one **configuration file** (see cfg file), in lines of the form `name = value`.
 
-Start from a complete, documented settings file:
+Start from a complete, documented settings file (delete header line *Bernard V1.0, date 2025_04_24* before using the file):
 
 ```
 python3 bernard/src/BERNARD.py --template > my_analysis.txt
