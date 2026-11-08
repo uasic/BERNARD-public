@@ -1,5 +1,5 @@
 suppressPackageStartupMessages({
-
+  
   args <- commandArgs(trailingOnly = TRUE)
   
   library(ConQuR)
@@ -34,7 +34,7 @@ suppressPackageStartupMessages({
   study_name <- config$study_name
   factor_of_interest <- config$factor_of_interest
   sample_id_column <- config$sample_id_column
-
+  
   if (!is.null(config$random_seed)) {
     set.seed(as.integer(config$random_seed))
   }
@@ -53,7 +53,7 @@ suppressPackageStartupMessages({
     storage.mode(values) <- "integer"
     values
   }
-
+  
   for (file in csv_inputs) {
     dataset_seed <- if (!is.null(config$random_seed)) as.integer(config$random_seed) else 42L
     set.seed(dataset_seed)
@@ -65,7 +65,7 @@ suppressPackageStartupMessages({
         full_file_path <- file.path(input_folder, file)
         data <- read_csv(full_file_path, show_col_types = FALSE)
         data <- as.data.frame(data)
-  
+        
         # Rename "Unnamed: 0" to the sample_id_column (e.g., "run") if it exists
         if ("Unnamed: 0" %in% colnames(data)) {
           colnames(data)[colnames(data) == "Unnamed: 0"] <- sample_id_column
@@ -78,7 +78,7 @@ suppressPackageStartupMessages({
         data[[sample_id_column]] <- NULL 
         
         metadata_data <- metadata_columns
-    
+        
         #Remove unnecessary metadata
         data$...1 <- NULL
         #Generating values...
@@ -87,28 +87,34 @@ suppressPackageStartupMessages({
         values[[factor_of_interest]] <- NULL
         values <- values[, !(names(values) %in% metadata_columns)]
         values <- as.data.frame(as_count_matrix(as.matrix(values)), check.names = FALSE)
-
+        
         #Generating batchid...
         data[[study_name]] <- factor(data[[study_name]])
         batchid = data[, study_name]
-  
+        
         #Generating covar...
         data[[factor_of_interest]] <- factor(data[[factor_of_interest]])
         covar <- data.frame(data[[factor_of_interest]])
         colnames(covar) <- factor_of_interest
-
+        
+        values_per_batch <- tapply(data[[factor_of_interest]], batchid, function(v) length(unique(v)))
+        if (nlevels(droplevels(data[[factor_of_interest]])) > 1 && all(values_per_batch == 1, na.rm = TRUE)) {
+          stop(paste0("factor of interest (", factor_of_interest, ") is nested in batch (", study_name,
+                      "); standard ConQuR cannot separate them, use ConQuR-LASSO"))
+        }
+        
         #Batch correction...
         batch_ref <- levels(batchid)[1]
         corrected_data <- suppressWarnings(
           ConQuR(tax_tab=values, covariates = covar, batchid=batchid, batch_ref=batch_ref))
         corrected_data <- cbind(setNames(data.frame(rownames(corrected_data)), sample_id_column), corrected_data)
-  
+        
         #Saving corrected data...
         corrected_data <- as.data.frame(corrected_data)
         corrected_data[[sample_id_column]] <- run_column  # Add back the "run" column
         corrected_data[[study_name]] <- study_name_column
         corrected_data[[factor_of_interest]] <- factor_of_interest_column
-  
+        
         # Generate the base name of the file (without path and extension)
         base_name <- tools::file_path_sans_ext(basename(file))  # Extract the base name of the input file
         # Construct the custom output file name with "ConQuR" string
