@@ -9,6 +9,7 @@ Batch effect, an unwanted source of variations caused by biological (e.g., sex, 
 - **BMC** — Batch Mean Centering, from the Microbiome Batch Effects Correction Suite (MBECS) ([Olbrich et al., 2023](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-023-05252-w))
 - **RemoveBatchEffect** — removeBatchEffect() from limma ([Ritchie et al., 2015](https://pubmed.ncbi.nlm.nih.gov/25605792/))
 - **ConQuR** — Conditional Quantile Regression ([Ling et al., 2022](https://www.nature.com/articles/s41467-022-33071-9))
+- **ConQuR-LASSO** — ConQuR with its penalized fitting strategy: logistic LASSO, LASSO quantile regression and interpolation ([Ling et al., 2022](https://www.nature.com/articles/s41467-022-33071-9))
 - **RUV3** — Remove Unwanted Variation 3, from MBECS ([Olbrich et al., 2023](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-023-05252-w))
 - **PLSDA** — PLSDA-batch ([Wang and Le Cao, 2023](https://pubmed.ncbi.nlm.nih.gov/36653900/))
 - **sPLSDA** — sparse PLSDA-batch ([Wang and Le Cao, 2023](https://pubmed.ncbi.nlm.nih.gov/36653900/))
@@ -395,7 +396,7 @@ full run writes.
 
 By default BERNARD runs every batch effect correction method it knows and then reports the best performing one. A run over all of them takes a long time, so only some of the methods can be chosen in bernard_cfg.txt. Users can run only selected methods and skip those that clearly violate assumptions.
 
-The settings file lists all sixteen of them under `correction_methods`, one per line, and a method with a `#` in front of its name is not run.
+The settings file lists all seventeen of them under `correction_methods`, one per line, and a method with a `#` in front of its name is not run.
 ```
 correction_methods =
     pyCombat
@@ -433,11 +434,18 @@ Consider original documentation here: https://www.bioconductor.org/packages/deve
 ```
 
 
-#### Adjusting ConQuR.R file
+#### Adjusting ConQuR.R and ConQuR-LASSO.R files
 
 ```
 Consider original documentation here: https://wdl2459.github.io/ConQuR/ConQuR.Vignette.html
 ```
+
+ConQuR.R refuses a dataset in which every batch holds a single value of `factor_of_interest`
+(for example, each study sampled only one breed). There the factor is a combination of the batch
+columns, standard ConQuR's quantile regression fails on a singular design for every taxon, and
+ConQuR silently returns the taxa unchanged. ConQuR.R stops with "factor of interest ... is nested
+in batch; standard ConQuR cannot separate them, use ConQuR-LASSO" instead, so that the uncorrected
+table is not scored as a correction. ConQuR-LASSO.R handles such data.
 
 #### Adjusting BMC.R file
 
